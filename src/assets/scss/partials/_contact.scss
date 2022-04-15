@@ -1,0 +1,106 @@
+#contact{
+        background-color: $bg-grey;
+        @extend .page_header_padding;
+    }
+
+ .contact-container{
+    @extend .default_container;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    // height: 100%;
+    // align-items: center;
+    @include contactBreakPoint(){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+ }
+
+
+ .contact-form{
+     background-color: purple;
+     width: 100%;
+     margin-bottom: 20px;
+     background-color: #fff;
+     padding: 50px;
+     @include contactBreakPoint(){
+        width: 55%;
+    }
+
+    h4{
+        font-family: 'Playfair Display';
+        // font-size: 18px;
+    }
+
+    form{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .form-label{
+            font-family: 'Roboto';
+            font-weight: 400;
+            color: $label-color;
+            font-size: 18px;
+        }
+        .form-control{
+            box-shadow: none;
+            border: 1px solid $input-border-color;
+            height:50px;
+            border-radius: 25px;
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 18px;
+            &:focus{
+                 border-color: $input-border-focus;
+            }
+        }
+
+        textarea.form-control{
+            height: 200px;
+        }
+
+        button{
+             font-family: 'Roboto';
+             font-weight: 400;
+             font-size: 18px;
+             color:map-get($btn-details , color );
+             background-color: map-get($btn-details , bg-color );
+             border:1px solid map-get($btn-details , bg-color );
+             padding: 9px 20px;
+             width: 200px;
+             border-radius: map-get($btn-details , radius );
+             transition: 0.25s all ease-in-out;
+             &:hover{
+                background-color: map-get($btn-details , bg-hover-color );
+                border-color: map-get($btn-details , bg-hover-color );
+             }
+        }  
+    }
+ }
+
+
+ .contact-address{
+     @extend .contact-form;
+     width: 100%;
+     background-color: #fff;
+     padding: 50px;
+     height: 400px;
+     @include contactBreakPoint(){
+        width: 43%;
+    }
+
+    .title{
+        font-family: 'Roboto';
+        font-weight:700;
+        color: gray;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .other{
+        font-family: 'Roboto';
+        font-weight:400;
+        color: $header-color;
+        font-size: 17px;
+    }
+ }

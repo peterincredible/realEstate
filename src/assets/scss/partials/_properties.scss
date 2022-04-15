@@ -1,0 +1,114 @@
+.property{
+    @extend .page_header_padding;
+}
+.props{
+    @extend .default_container;
+}
+.prop-headers{
+   
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+
+     h4{
+        @extend .headers_title;
+        width:100%;
+        text-align: left;
+        margin-bottom: 20px;
+        @include PropertiesBreakPoint(map-get($PropertiesBreakPointsMap,first)){width: auto;}
+     }
+
+     .control{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          @include PropertiesBreakPoint(map-get($PropertiesBreakPointsMap,first)){width: auto;}
+          .prev,.next,.div{
+              font-family: 'Roboto';
+              font-size: 18px;
+              color:#000;
+              cursor: pointer;
+              padding-left: 10px;
+              padding-right: 10px;
+              &:hover{
+                  color:#b3b3b3;
+
+              }
+          }
+     
+          .div{
+            color:#b3b3b3;
+          }
+
+     }
+}
+
+.props-item{
+    // background-color:purple;
+    height: 600px;
+    width: 100%;
+    @include PropertiesBreakPoint(map-get($PropertiesBreakPointsMap,first)){width:96%;}
+
+    .img-wrapper{
+        height: 75%;
+        background-color: green;
+        transition: 0.25s all ease-in-out;
+        cursor: pointer;
+        img{
+            image-rendering: -moz-crisp-edges; // Firefox 
+            image-rendering: -o-crisp-edges; // Opera /
+            image-rendering: -webkit-optimize-contrast;// Webkit (non-standard naming) /
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor; // IE (non-standard property) */
+        }
+    }
+    &:hover .img-wrapper{
+        box-shadow:10px 5px 100px rgb(197, 196, 196);
+    }
+
+}
+
+.props-details{
+    padding: 20px;
+    .price{
+        font-family: 'Roboto';
+        font-weight:900;
+        color: #343a40;;
+        text-align: left;
+    }
+    .r-b-s{
+        text-align: left;
+        font-family: 'Roboto';
+        font-weight:400;
+        color: gray;
+        font-size: 15px;
+          span{
+            //   margin-right: 30px;
+          }
+    }
+    .loc{
+        text-align: left;
+        font-family: 'Roboto';
+        font-weight:400;
+        color: gray;
+        font-size: 15px;
+    }
+}
+.m-btn{
+    color: map-get($btn-details,color);
+    background-color: map-get($btn-details,bg-color);
+    border-radius:  map-get($btn-details,radius);
+    transition: 0.25s all ease-in-out;
+    border:1px solid map-get($btn-details,bg-color);
+    display: inline-block;
+    width: 300px;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    &:hover{
+        background-color:  map-get($btn-details,bg-hover-color);
+        border-color: map-get($btn-details,bg-hover-color);
+    }
+}

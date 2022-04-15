@@ -1,0 +1,37 @@
+
+@mixin  navBreakPoint(){
+    @media (min-width:1120px) {
+        @content
+    }
+}
+
+@mixin contactBreakPoint(){
+    @media (min-width:770px){
+        @content
+    }
+}
+
+
+@mixin AgentsBreakPoint($width){
+    @media (min-width:$width){
+        @content
+    }
+}
+
+@mixin PropertiesBreakPoint($width){
+    @media (min-width:$width){
+        @content
+    }
+}
+
+@mixin FooterBreakPoint($width){
+    @media (min-width:$width){
+        @content
+    }
+}
+
+@mixin AboutBreakPoint($width){
+    @media (min-width:$width){
+        @content
+    }
+}

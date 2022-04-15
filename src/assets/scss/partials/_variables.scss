@@ -1,0 +1,43 @@
+$input-border-color:#ced4da !important;
+$input-border-focus:#f69314 !important;
+$bg-grey:#f8f9fa!important;
+$header-color:#f69314 !important;
+$label-color:#000;
+
+
+
+
+$header-details:(
+    'py':20px,
+    'normal_link_color':#fff,
+    "scroll_link_color":#000,
+    "scroll_background_color":#fff,
+    "scroll_link_active_color":$header-color
+);
+
+$btn-details:(
+    'color':#fff,
+    'bg-color':#f69314,
+    'bg-hover-color':#343a40,
+    'radius':25px
+
+);
+
+$AgentsBreakPointsMap:(
+    'first':768px,
+    'second':993px,
+);
+
+$PropertiesBreakPointsMap:(
+    'first':768px,
+    'second':993px,
+);
+
+$FooterBreakPointsMap:(
+    'first':768px,
+    'second':993px,
+);
+$AboutBreakPointsMap:(
+    'first':768px,
+    'second':993px,
+);

@@ -1,0 +1,27 @@
+@import "./partials/variables";
+@import './partials/myExtends';
+@import "./partials/mymixins";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+html,body,#app{
+    height: 100%;
+}
+body{
+    position: relative;
+    // overflow-y: scroll;
+}
+.main{
+    
+    
+}
+
+@import "./partials/header";
+@import "./partials/contact";
+@import "./partials/banner";
+@import "./partials/agents";
+@import "./partials/properties";
+@import "./partials/footer.scss";
+@import "./partials/about";

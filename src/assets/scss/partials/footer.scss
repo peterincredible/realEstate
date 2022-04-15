@@ -1,0 +1,113 @@
+.footer{
+  background-color: #333333;
+  padding-top: 10px;
+}
+
+.footer-items-wrapper{
+  @extend .default_container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .footer-items{
+        //  background-color: purple;
+         width: 100%;
+        //  margin-bottom:10px;
+         @include FooterBreakPoint(map-get($FooterBreakPointsMap,first)){
+               width: 48%;
+         }
+         @include FooterBreakPoint(map-get($FooterBreakPointsMap,second)){
+            width: 32%;
+      }
+      .m-group{
+        //   border-radius: 70px;
+          overflow: hidden;
+          width: 320px;
+        //   height: 100px;
+          
+         
+          input{
+              font-family: "Roboto";
+              font-weight: 400;
+              color: #333333;
+              font-size: 17px;
+              width: 70%;
+              padding: 12px;
+              border-top-left-radius: 70px;
+              border-bottom-left-radius: 70px;
+              background-color: #333333;
+              box-shadow: none;
+              color: #fff;
+              outline: none;
+              border-left: 1px solid #6c757d!important;
+              border-top: 1px solid #6c757d!important;
+              border-bottom: 1px solid #6c757d!important;
+              border-right: 1px solid #333333!important
+               
+          }
+          span{
+              padding: 12px;
+              width: 30%;
+              text-align: center;
+              border-top-right-radius: 70px;
+              border-bottom-right-radius: 70px;
+              background-color:#f69314;
+              border:1px solid #f69314;
+              transition: 0.25s all ease-in-out;
+              font-family: "Roboto";
+              font-weight: 400;
+              color: #333333;
+              font-size: 17px;
+              cursor: pointer;
+              &:hover{
+                  background-color: #fff;
+                  border-color: #fff;
+              }
+          }
+      }
+      h5{
+         font-family: "Playfair Display";
+         font-weight: 400;
+         color: #fff;
+         font-size: 20px;
+         margin-bottom: 20px;
+      }
+      ul{
+          list-style-type: none;
+          padding-left: 0px;
+      }
+      p,div span{
+          font-family: "Roboto";
+          font-weight: 400;
+          color: #737373;
+          font-size: 17px;
+      }
+      ul li{
+          margin-bottom:10px
+      }
+      ul li a{
+          font-family: "Roboto";
+          font-weight: 400;
+          color:#999999;
+          font-size: 17px;
+          text-decoration: none;
+          transition: 0.25s all ease-in-out;
+           &:hover{
+               color:#fff
+           }
+      }
+    }
+}
+
+.footer-copyright{
+    @extend .default_container;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color:#737373;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 50px;
+}
