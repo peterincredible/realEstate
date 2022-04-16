@@ -4,7 +4,7 @@
             <div class="c_a">
                 <div class="carousel-wrapper">
                     <div class="img-holder">
-                        <carousel ref="slicky" :settings='settings' :wrap-around="true">
+                        <carousel ref="slicky2" :settings='settings' :wrap-around="true">
                             <slide v-for="(image,index) in images" :key="index">
                                   <img :src='image' class="w-100 h-100"/>
                             </slide>
@@ -133,16 +133,18 @@ import person4 from '../assets/images/person_5.jpg'
 export default {
   components: { Carousel, Slide },
   setup () {
-    const slicky = ref(null)
+    const slicky2 = ref(null)
     const settings = { itemsToShow: 1, snapAlign: 'center' }
     function next () {
-      slicky.value.next()
+      slicky2.value.next()
+      console.log('next triggered')
     }
     function prev () {
-      slicky.value.prev()
+      slicky2.value.prev()
+      console.log('prev triggered')
     }
     const images = [image1, image2, image3, image4, image5]
-    return { next, prev, settings, slicky, images, person4 }
+    return { next, prev, settings, slicky2, images, person4 }
   }
 }
 </script>
